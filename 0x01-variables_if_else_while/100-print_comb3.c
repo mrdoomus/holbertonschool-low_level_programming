@@ -17,9 +17,14 @@ int main(void)
 	else
 	putchar ((number1 % 10) + '0');
 	putchar ((number2 % 10) + '0');
-	if (number1 != 8 && number2 != 9)
+	if (number1 == 8 && number2 == 9)
+	{
+	}
+	else
+	{
 	putchar (',');
 	putchar (' ');
+	}
 	}
 	}
 	putchar('\n');

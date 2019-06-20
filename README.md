@@ -1,1 +1,1 @@
-This folder contains several C topics
+This folder contains several C topics for a novice programmer

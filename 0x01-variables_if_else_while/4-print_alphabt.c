@@ -10,6 +10,9 @@ int main(void)
 
 	for (lower = 'a'; lower <= 'z'; lower++)
 	{
+	if (lower == 'e' || lower == 'q')
+	continue;
+	else
 	 putchar (lower);
 	}
 	putchar ('\n');

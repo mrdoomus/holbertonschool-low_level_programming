@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	char lower;
+	int number;
 
-	for (lower = 'a'; lower <= 'z'; lower++)
+	for (number = 0; number < 10; number++)
 	{
-	 putchar (lower);
+	printf ("%d", number);
 	}
-	putchar ('\n');
+	printf ("\n");
 	return (0);
 }

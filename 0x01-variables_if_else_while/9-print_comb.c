@@ -10,8 +10,13 @@ int main(void)
 
 	for (number = 0; number < 10; number++)
 	{
-	printf("%d", number);
+	putchar ((number % 10) + '0');
+	if (number == 9)
+	continue;
+	else
+	putchar (',');
+	putchar (' ');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }

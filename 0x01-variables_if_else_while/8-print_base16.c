@@ -6,9 +6,14 @@
  */
 int main(void)
 {
+	int number;
 	char lower;
 
-	for (lower = 'a'; lower <= 'z'; lower++)
+	for (number = 0; number < 9; number++)
+	{
+	putchar ((number % 10) + '0');
+	}
+	for (lower = 'a'; lower <= 'f'; lower++)
 	{
 	putchar (lower);
 	}

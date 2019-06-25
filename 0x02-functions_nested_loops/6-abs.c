@@ -5,10 +5,10 @@
  *
  * Return: Always 0 (Success)
  */
-int _islower(int c)
+int _abs(int r)
 {
-if (c >= 97 && c <= 122)
-return(1);
+if (r < 0)
+return (-r);
 else
-return(0); 
+return (r);
 }

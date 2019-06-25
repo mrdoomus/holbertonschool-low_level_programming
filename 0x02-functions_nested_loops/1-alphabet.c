@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * print_alphabet - void
  *
  * Return: Always 0 (Success)
  */

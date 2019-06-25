@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * _abs - Entry point
+ *
+ * @r: r is variable name
  *
  * Return: Always 0 (Success)
  */

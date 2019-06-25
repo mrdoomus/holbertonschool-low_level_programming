@@ -9,17 +9,15 @@
  */
 int print_last_digit(int c)
 {
-int abs;
 if (c < 0)
 {
-abs = (-1 * c);
-_putchar((abs % 10) + '0');
-return (abs % 10);
+c = -c;
+_putchar((c % 10) + '0');
+return (c % 10);
 }
 else
 {
-abs = c;
-_putchar((abs % 10) + '0');
-return (abs % 10);
+_putchar((c % 10) + '0');
+return (c % 10);
 }
 }

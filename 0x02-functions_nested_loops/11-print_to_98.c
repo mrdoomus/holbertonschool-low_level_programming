@@ -12,36 +12,33 @@ void print_to_98(int n)
 {
 int c;
 
-if (n == 0 || n == 98)
-{
-if (n == 98)
-printf("98\n");
-else
+if (n < 98)
 {
 for (c = n; c <= 98; c++)
 {
-printf("%d, ", c);
 if (c == 98)
 printf("%d\n", c);
+else
+printf("%d, ", c);
 }
 }
-}
+
 if (n > 98)
 {
 for (c = n; c >= 98; c--)
 {
-printf("%d, ", c);
 if (c == 98)
 printf("%d\n", c);
-}
-}
-if (n < 98 && n != 0)
-{
-for (c = n; c <= 98; c++)
-{
+else
 printf("%d, ", c);
-if (c == 98)
-printf("%d\n", c);
+}
+}
+
+else
+{
+if (n == 98)
+{
+printf("%d\n", n);
 }
 }
 }

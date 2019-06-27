@@ -29,6 +29,6 @@ for (i = size; i > 0; i--)
 	}
 _putchar('\n');
 }
-if (size == 0)
+if (size <= 0)
 _putchar('\n');
 }

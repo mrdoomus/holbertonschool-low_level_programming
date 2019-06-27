@@ -14,16 +14,14 @@ int max = 0;
 
 while (num != 1)
 {
-	if (num % i == 0)
+	while (num % i == 0)
 	{
-		while (num % i == 0)
-		{
-			if (i > max)
-				max = i;
-		num = num / i;
-		}
+		if (i > max)
+			max = i;
+	num = num / i;
 	}
-	i++;
+i++;
 }
 printf("%d\n", max);
+return (0);
 }

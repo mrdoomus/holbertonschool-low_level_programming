@@ -3,6 +3,8 @@
 /**
  * _isupper - Entry point
  *
+ * @c: c is a variable name
+ *
  * Return: Always 0 (Success)
  */
 

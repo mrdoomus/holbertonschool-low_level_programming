@@ -20,6 +20,6 @@ for (i = 0; i < size; i++)
 	}
 _putchar('\n');
 }
-if (size == 0)
+if (size <= 0)
 _putchar('\n');
 }

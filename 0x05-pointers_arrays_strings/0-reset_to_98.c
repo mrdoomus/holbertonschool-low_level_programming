@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * reset_to_98 - check the code for Holberton School students.
+ *
+ * @*n: is a pointer to an int
  *
  * Return: Always 0.
  */

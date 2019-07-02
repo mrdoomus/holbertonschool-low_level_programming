@@ -3,25 +3,23 @@
 /**
  * print_rev - Swaps integers wih pointers.
  *
- * @*s: is a pointer to a char
+ * @s: is a pointer to a char
  *
  * Return: Always 0.
  */
 
 void print_rev(char *s)
 {
-/*for (*s = '\0'; *s >= 0; s--)
+int i, j;
+
+while (*(s + i) != '\0')
 {
-_putchar(*s);
+i++;
+}
 
-}*/
-
-*s = '\0';
-
-while (*s != 'I')
+for (j = (i - 1); j >= 0; j--)
 {
-_putchar(*s);
-s--;
+_putchar(*(s + j));
 }
 _putchar('\n');
 }

@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * swap - Swaps integers wih pointers.
+ * swap_int - Swaps integers wih pointers.
  *
- * @*a: is a pointer to an int
+ * @a: is a pointer to an int
  *
- * @*b: is a pointer to an int
+ * @b: is a pointer to an int
  *
  * Return: Always 0.
  */

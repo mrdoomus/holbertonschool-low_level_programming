@@ -12,7 +12,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-char buff[2000];
+char buff[1000];
 int i = 0, j, pos = 0;
 
 while (*(src + i) != '\0')
@@ -26,5 +26,6 @@ for (j = 0; *(src + j) != '\0' ; j++)
 	*(dest + pos) = buff[j];
 	pos++;
 }
+dest[j+1] = '\0';
 return (dest);
 }

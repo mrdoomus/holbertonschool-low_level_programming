@@ -26,6 +26,6 @@ for (j = 0; *(src + j) != '\0' ; j++)
 	*(dest + pos) = buff[j];
 	pos++;
 }
-dest[j+1] = '\0';
+dest[j] = '\0';
 return (dest);
 }

@@ -8,24 +8,21 @@
  * Return: Always 0.
  */
 
-char *cap_string(char *s)
+char *leet(char *s)
 {
-int i = 0, flag = 0;
+	char alph[5][2] = {{'a','A'},  {'e', 'E'}, {'o', 'O'}, {'t', 'T'}, {'l', 'L'}};
+	char nums[5] = {'4', '3', '0', '7', '1'};
+	int i = 0, j;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == '\t' || s[i] == '\n' || s[i] == ' ' || s[i] == ',' || s[i] == ';'
-		|| s[i] == '.' || s[i] == '!' || s[i] == '"' || s[i] == '(' || s[i] == ')'
-		|| s[i] == '{' || s[i] == '}')
-			flag = 1;
-		else if (s[i] >= 97 && s[i] <= 122 && flag == 1)
+		for (j = 0; j < 5; j++)
 		{
-			s[i] -= 32;
-			flag = 0;
+			if (alph[j][0] == s[i] || alph[j][1] == s[i])
+				s[i] = nums[j];
 		}
-		else
-		flag = 0;
-	i++;
+		i++;
 	}
+
 return (s);
 }

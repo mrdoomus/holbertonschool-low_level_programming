@@ -12,16 +12,17 @@
 void reverse_array(int *a, int n)
 {
 int buff[1000];
-int i = 0, j = (n - 1), k;
+int i = 0, k;
 
-	while (i <= n)
+	while (i < n)
 	{
-		buff[i] = a[j];
+		buff[i] = a[i];
 		i++;
-		j--;
 	}
-	for (k = 0; k <= n; k++)
+
+	for (k = 0; k < n; k++)
 	{
-		a[k] = buff[k];
+		a[k] = buff[i -1];
+		i--;
 	}
 }

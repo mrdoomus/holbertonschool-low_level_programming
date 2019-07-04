@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * cap_string - Converts to uppercase any char after a special char.
+ * leet - Change a string to  1337 format.
  *
  * @s: is a pointer to a char.
  *
@@ -10,7 +10,8 @@
 
 char *leet(char *s)
 {
-	char alph[5][2] = {{'a','A'},  {'e', 'E'}, {'o', 'O'}, {'t', 'T'}, {'l', 'L'}};
+	char alph[5][2] = {{'a', 'A'},  {'e', 'E'},
+	{'o', 'O'}, {'t', 'T'}, {'l', 'L'}};
 	char nums[5] = {'4', '3', '0', '7', '1'};
 	int i = 0, j;
 

@@ -3,7 +3,7 @@
 int _strlen(char *s);
 
 /**
- * _strncat - This function concatenates two strings.
+ * _strcat - This function concatenates two strings.
  *
  * @dest: is a pointer to a char.
  * @src: is a pointer to a char.
@@ -11,7 +11,7 @@ int _strlen(char *s);
  * Return: Always 0.
  */
 
-char *_strncat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 int i = _strlen(dest), j;
 

@@ -1,11 +1,13 @@
 #include "holberton.h"
 
 /**
- * _strlen - Swaps integers wih pointers.
+ * _strncpy - Swaps integers wih pointers.
  *
- * _strcat
+ * @dest: is a pointer to a char.
  *
- * @i: is a pointer to a char
+ * @src: is a pointer to a char.
+ *
+ * @n: is a pointer to an int.
  *
  * Return: Always 0.
  */

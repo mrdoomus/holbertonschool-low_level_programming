@@ -1,37 +1,30 @@
 #include "holberton.h"
 
 /**
- * _strlen - Swaps integers wih pointers.
+ * _strcmp - Comapres two strings.
  *
- * _strcat
+ * @s1: is a pointer to a char.
  *
- * @i: is a pointer to a char
+ * @s2: is a pointer to a char.
  *
  * Return: Always 0.
  */
 
-int _strlen(char *s);
-
 int _strcmp(char *s1, char *s2)
 {
-int size1 = _strlen(s1), size2 = _strlen(s2);
 
-	if (size1 < size2)
-		return (-15);
-	else if (size1 > size2)
-		return (15);
-	else
-		return (0);
-}
-
-int _strlen(char *s)
-{
 int i = 0;
 
-	while (*(s + i) != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		i++;
+		if (s1[i] != s2[i])
+		{
+			return (*s1 - *s2);
+		}
+		else if (s1[i] == s2[i])
+		{
+			i++;
+		}
 	}
-
-return (i);
+return (0);
 }

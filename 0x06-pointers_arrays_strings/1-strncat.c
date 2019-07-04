@@ -1,16 +1,18 @@
 #include "holberton.h"
 
+int _strlen(char *s);
+
 /**
- * _strlen - Swaps integers wih pointers.
+ * _strncat - Concatenates two strings.
  *
- * _strcat
+ * @dest: is a pointer to a string.
  *
- * @i: is a pointer to a char
+ * @src: is a pointre to a string.
+ *
+ * @n: is an int
  *
  * Return: Always 0.
  */
-
-int _strlen(char *s);
 
 char *_strncat(char *dest, char *src, int n)
 {
@@ -25,6 +27,14 @@ int i = _strlen(dest), j;
 
 return (dest);
 }
+
+/**
+ *_strlen - Measures the lenght of a string.
+ *
+ * @s: is a pointer to a char.
+ *
+ * Return: Always 0.
+ */
 
 int _strlen(char *s)
 {

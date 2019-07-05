@@ -22,7 +22,7 @@ int i = 0, k;
 
 	for (k = 0; k < n; k++)
 	{
-		a[k] = buff[i -1];
+		a[k] = buff[i - 1];
 		i--;
 	}
 }

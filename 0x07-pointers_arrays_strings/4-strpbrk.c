@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring.
+ * _strpbrk - searches a string for any of a set of bytes.
  *
  * @s: is a pointer to a char
  * @accept: is a pointer to a char
@@ -16,8 +16,8 @@ int i, j;
 
 	for (i = 0; s[i] != 0; i++)
 		for (j = 0; accept[j] != 0; j++)
-				if (s[i] == accept[j])
-					return ((s + i));
+			if (s[i] == accept[j])
+				return ((s + i));
 
 return ((s + i));
 }

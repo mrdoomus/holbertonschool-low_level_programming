@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring.
+ * print_chessboard - function that prints the chessboard.
  *
- * @s: is a pointer to a char
- * @accept: is a pointer to a char
+ * @a: is a pointer to an array of chars
  *
  * Return: Returns the transformed pointer
  *

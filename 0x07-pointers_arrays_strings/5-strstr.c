@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring.
+ * _strstr - locates a substring.
  *
- * @s: is a pointer to a char
- * @accept: is a pointer to a char
+ * @haystack: is a pointer to a char
+ * @needle: is a pointer to a char
  *
  * Return: Returns the transformed pointer
  *
@@ -16,7 +16,7 @@ int i;
 
 	for (i = 0; haystack[i]; i++)
 		if (haystack[i] == needle[0])
-			return(haystack + i);
+			return (haystack + i);
 
 return (haystack + i);
 }

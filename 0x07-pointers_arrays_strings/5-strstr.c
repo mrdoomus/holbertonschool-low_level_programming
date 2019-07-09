@@ -16,7 +16,7 @@ int i;
 
 	for (i = 0; haystack[i]; i++)
 		if (haystack[i] == needle[0])
-			return (haystack + i);
+			return (haystack = (haystack + i));
 
-return (haystack + i);
+return (haystack = (haystack + i));
 }

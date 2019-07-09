@@ -19,5 +19,5 @@ int i, j;
 			if (s[i] == accept[j])
 				return ((s + i));
 
-return ((s + i));
+return (0);
 }

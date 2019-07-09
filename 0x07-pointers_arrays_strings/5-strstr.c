@@ -18,5 +18,8 @@ int i;
 		if (haystack[i] == needle[0])
 			return (haystack = (haystack + i));
 
-return (haystack = (haystack + i));
+if (haystack[i] == needle[0])
+	return (haystack = (haystack + i));
+
+return (0);
 }

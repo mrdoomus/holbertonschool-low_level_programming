@@ -19,13 +19,13 @@ unsigned int cnt = 0;
 	{
 	flag = 0;
 		for (j = 0; accept[j] != 0; j++)
+		{
+			if (s[i] == accept[j])
 			{
-				if (s[i] == accept[j])
-				{
-					flag = 1;
-					cnt++;
-				}
+				flag = 1;
+				cnt++;
 			}
+		}
 	if (flag == 0)
 	break;
 	}

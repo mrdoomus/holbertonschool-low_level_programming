@@ -58,12 +58,16 @@ return (1 + _strlen_recursion(s + 1));
 int _comparission(char *s, int length)
 {
 
-if (*s == s[length - 1])
+/*if (*s == s[length - 1])
 	return (1);
 if (*s > s[length - 1])
 	return (1);
-else if (*s == s[length])
-	return (_comparission(s+1, ((length-1) - 1)));
+*/
+
+if (length <= 1)
+	return (1);
+else if (*s == s[length - 1])
+	return (_comparission(++s, ((length - 1) - 1)));
 else
 	return (0);
 

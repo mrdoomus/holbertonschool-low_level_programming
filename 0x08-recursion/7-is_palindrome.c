@@ -63,7 +63,7 @@ if (*s == s[length - 1])
 if (*s > s[length - 1])
 	return (1);
 else if (*s == s[length])
-	return (_comparission(++s, --length));
+	return (_comparission(s+1, ((length-1) - 1)));
 else
 	return (0);
 

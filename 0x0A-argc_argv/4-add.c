@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - Prints the sum of n arguments
@@ -18,7 +19,8 @@ int sum = 0;
 
 for (i = 1; i < argc; i++)
 {
-	if (*argv[i] >= 48 && *argv[i] <= 57)
+	/*if (*argv[i] >= 48 && *argv[i] <= 57)*/
+	if (isdigit(*argv[i]))
 		sum += atoi(argv[i]);
 	else
 	{

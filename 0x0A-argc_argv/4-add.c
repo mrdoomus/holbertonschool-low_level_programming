@@ -26,8 +26,8 @@ for (i = 1; i < argc; i++)
 		return (1);
 	}
 }
-
 printf("%d\n", sum);
+
 return (0);
 
 }

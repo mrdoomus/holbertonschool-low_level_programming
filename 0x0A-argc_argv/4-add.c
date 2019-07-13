@@ -28,6 +28,6 @@ for (i = 1; i < argc; i++)
 }
 printf("%d\n", sum);
 
-return (0);
+return (sum);
 
 }

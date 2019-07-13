@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Prints the result of the multiplication of 2 numbers
+ *
+ * @argc: Number of arguments
+ * @argv: Value of arguments
+ *
+ * Return: Returns an int
+**/
+
 int main(int argc, char *argv[])
 {
 
@@ -26,6 +35,6 @@ if (argc == 3)
 else
 {
 	printf("Error\n");
-	return(1);
+	return (1);
 }
 }

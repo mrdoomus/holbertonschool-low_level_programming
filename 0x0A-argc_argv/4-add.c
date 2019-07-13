@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 
-int i;
+unsigned int i;
 unsigned int sum = 0;
 
 for (i = 1; i < argc; i++)

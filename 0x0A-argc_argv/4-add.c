@@ -26,7 +26,12 @@ for (i = 1; i < argc; i++)
 		return (1);
 	}
 }
+
+if (i == 1)
+printf("0\n");
+else
 printf("%d\n", sum);
+
 return (0);
 
 }

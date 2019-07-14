@@ -18,30 +18,35 @@ int i = 0, j = 0, k = 0, l = 0, m = 0, sum = 0, cents = atoi(argv[1]);
 		if (cents < 0)
 			printf("0\n");
 		else
-			while (cents >= 25)
+			if (cents >= 25)
 			{
-				cents -= 25;
-				i++;
+				while (cents >= 25)
+					cents -= 25;
+					i++;
 			}
-			while (cents >= 10)
+			if (cents >= 10)
 			{
-				cents -= 10;
-				j++;
+				while (cents >= 10)
+					cents -= 10;
+					j++;
 			}
-			while (cents >= 5)
+			if (cents >= 5)
 			{
-				cents -= 5;
-				k++;
+				while (cents >= 5)
+					cents -= 5;
+					k++;
 			}
-			while (cents >= 2)
+			if (cents >= 2)
 			{
-				cents -= 2;
-				l++;
+				while (cents >= 2)
+					cents -= 2;
+					l++;
 			}
-			while (cents >= 1)
+			if (cents >= 1)
 			{
-				cents -= 1;
-				m++;
+				while (cents >= 1)
+					cents -= 1;
+					m++;
 			}
 			sum = i + j + k + l + m;
 			printf("%d\n", sum);

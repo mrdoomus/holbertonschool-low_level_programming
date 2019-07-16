@@ -42,8 +42,8 @@ if (s2 == NULL)
 
 size1 = _strlen(s1);
 size2 = _strlen(s2);
-totSize = (size1 + size2) + 1;
-ar = malloc(totSize * sizeof(char));
+totSize = (size1 + size2)+1;
+ar = malloc(totSize *sizeof(char));
 
 if (ar == NULL)
 	return (NULL);

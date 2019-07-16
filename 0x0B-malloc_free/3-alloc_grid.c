@@ -33,7 +33,7 @@ else
 		if (ar[i] == NULL)
 		{
 			for (j = i; j >= 0; j--)
-				free(ar[i]);
+				free(ar[j]);
 		free(ar);
 		return (NULL);
 		}

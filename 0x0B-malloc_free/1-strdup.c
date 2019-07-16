@@ -46,6 +46,8 @@ else
 {
 for (i = 0; i < size; i++)
 	ar[i] = str[i];
+
+ar[i + 1] = '\0';
 return (ar);
 }
 

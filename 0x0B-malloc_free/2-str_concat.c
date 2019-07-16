@@ -32,10 +32,7 @@ return (i);
 char *str_concat(char *s1, char *s2)
 {
 
-int i, j;
-int size1 = _strlen(s1) + 1;
-int size2 = _strlen(s2) + 1;
-int totSize = (size1 + size2) - 1;
+int i, j, size1, size2, totSize;
 char *ar;
 
 if (s1 == NULL)
@@ -43,16 +40,19 @@ if (s1 == NULL)
 if (s2 == NULL)
 	s2 = "";
 
+size1 = _strlen(s1);
+size2 = _strlen(s2);
+totSize = (size1 + size2) + 1;
 ar = malloc(totSize * sizeof(char));
 
 if (ar == NULL)
 	return (NULL);
 else
 {
-for (i = 0; i < size1 - 1; i++)
+for (i = 0; i < size1; i++)
 	ar[i] = s1[i];
 
-for (j = 0; j < size2 - 1; j++)
+for (j = 0; j < size2; j++)
 {
 	ar[i] = s2[j];
 	i++;

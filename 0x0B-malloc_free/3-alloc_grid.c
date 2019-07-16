@@ -32,7 +32,7 @@ else
 
 		if (ar[i] == NULL)
 		{
-			for (j = 0; j < i; j--)
+			for (j = i; j >= 0; j--)
 				free(ar[i]);
 		free(ar);
 		return (NULL);

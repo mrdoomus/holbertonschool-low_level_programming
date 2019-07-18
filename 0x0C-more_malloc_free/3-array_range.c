@@ -3,30 +3,29 @@
 #include <stdlib.h>
 
 /**
- * _calloc - Allocates memory for an array.
+ * array_range - Creates an array of integers.
  *
- * @nmemb: Size of the array.
- * @size: Size of the pointing variable.
+ * @min: Min number of the array.
+ * @max: Max number of the array.
  *
- * Return: Returns a pointer..
+ * Return: Returns a pointer.
 **/
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+int *array_range(int min, int max)
 {
-unsigned int i;
-char *ptr;
+int *ptr;
 
-if (nmemb < 1 || size < 1)
+if (min > max)
 	return (NULL);
 
-ptr = malloc(nmemb * size);
+ptr = malloc(max * sizeof(int));
 
 if (ptr == NULL)
 	return (NULL);
 else
 {
-	for (i = 0; i < nmemb; i++)
-		ptr[i] = 0;
+	for (min = min; min < max; min++)
+		ptr[min] = min;
 }
 
 return (ptr);

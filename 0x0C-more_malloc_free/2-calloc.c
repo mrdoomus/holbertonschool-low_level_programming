@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -25,7 +24,7 @@ if (ptr == NULL)
 	return (NULL);
 else
 {
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
 		ptr[i] = 0;
 }
 

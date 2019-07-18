@@ -18,7 +18,7 @@ int *ptr;
 if (min > max)
 	return (NULL);
 
-ptr = malloc(max * sizeof(int));
+ptr = malloc((max - min) * sizeof(int) + 1);
 
 if (ptr == NULL)
 	return (NULL);

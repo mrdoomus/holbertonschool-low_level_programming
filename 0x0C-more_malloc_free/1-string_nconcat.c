@@ -40,9 +40,13 @@ if (s1 == NULL)
 if (s2 == NULL)
 	s2 = "";
 
-size2 = _strlen(s2);
 size1 = _strlen(s1);
-totSize = (size1 + size2) +1;
+size2 = _strlen(s2);
+
+if (n >= size2)
+	n = size2;
+
+totSize = (size1 + n) +1;
 
 ptr = malloc(totSize *sizeof(char));
 
@@ -53,21 +57,10 @@ else
 	for (i = 0; i < size1; i++)
 		ptr[i] = s1[i];
 
-	if (n >= size2)
+	for (j = 0; j < n; j++)
 	{
-		for (j = 0; j < size2; j++)
-		{
-			ptr[i] = s2[j];
-			i++;
-		}
-	}
-	else
-	{
-		for (j = 0; j < n; j++)
-		{
-			ptr[i] = s2[j];
-			i++;
-		}
+		ptr[i] = s2[j];
+		i++;
 	}
 }
 ptr[i + 1] = '\0';

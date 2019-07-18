@@ -24,7 +24,7 @@ if (ptr == NULL)
 	return (NULL);
 else
 {
-	for (min = min; min < max; min++)
+	for (min = min; min <= max; min++)
 		ptr[min] = min;
 }
 

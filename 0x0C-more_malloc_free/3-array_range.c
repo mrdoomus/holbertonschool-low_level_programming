@@ -14,23 +14,26 @@
 int *array_range(int min, int max)
 {
 int i;
+int sz;
 int *ptr;
 
 if (min > max)
 	return (NULL);
+sz = ((max - min) + 1);
 
-ptr = malloc(((max - min) + 1) * sizeof(int));
+ptr = malloc(sz * sizeof(int));
 
 if (ptr == NULL)
 	return (NULL);
+
 else
 {
-	for (i = 0; i < ((max - min) + 1); i++)
+	for (i = 0; i < sz; i++)
 	{
 		ptr[i] = min;
 		min++;
 	}
-}
 
 return (ptr);
+}
 }

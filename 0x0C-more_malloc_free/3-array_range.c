@@ -21,7 +21,7 @@ if (min > max)
 	return (NULL);
 sz = ((max - min) + 1);
 
-ptr = malloc(sz * sizeof(int));
+ptr = malloc(sz *sizeof(int));
 
 if (ptr == NULL)
 	return (NULL);

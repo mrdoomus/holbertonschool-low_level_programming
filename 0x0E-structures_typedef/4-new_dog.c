@@ -52,13 +52,13 @@ return (dest);
 }
 
 /**
- * 
+ * new_dog - Creates function with name and owner copies
  *
- * @name:
- * @age:
- * @owner:
+ * @name: Name parameter
+ * @age: Age parameter
+ * @owner: Owner parameter
  *
- * Return:
+ * Return: Returns nothing
 **/
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -74,15 +74,15 @@ if (newDog == NULL)
 newName = malloc(_strlen(name) + 1);
 if (newName == NULL)
 {
-	free(newName);
+	free(newDog);
 	return(NULL);
 }
 
 newOwner = malloc(_strlen(owner) + 1);
 if (newOwner == NULL)
 {
-	free(newOwner);
 	free(newName);
+	free(newDog);
 	return(NULL);
 }
 

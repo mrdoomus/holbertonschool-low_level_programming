@@ -1,7 +1,17 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * free_dog - Freeing dogs :^)
+ * d: Pointer to dog struct
+ * Return: Returns nothing
+**/
 void free_dog(dog_t *d)
 {
-free(d);
+if (d != NULL)
+{
+	free(d->name);
+	free(d->owner);
+	free(d);
+}
 }

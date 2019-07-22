@@ -23,31 +23,24 @@ return (i);
 }
 
 /**
- * _strcpy - Swaps integers wih pointers.
+ * _strncpy - Swaps integers wih pointers.
  *
- * @dest: is a pointer to a char
+ * @dest: is a pointer to a char.
  *
- * @src: is a pointer to a char
+ * @src: is a pointer to a char.
  *
  * Return: Always 0.
  */
-char *_strcpy(char *dest, char *src)
-{
-char buff[1000];
-int i = 0, j, pos = 0;
 
-while (*(src + i) != '\0')
+char *_strncpy(char *dest, char *src)
 {
-	buff[i] = *(src + i);
-	i++;
-}
+int i;
 
-for (j = 0; *(src + j) != '\0' ; j++)
-{
-	*(dest + pos) = buff[j];
-	pos++;
-}
-dest[j] = '\0';
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+
+	dest[i] = '\0';
+
 return (dest);
 }
 
@@ -87,8 +80,8 @@ if (newOwner == NULL)
 	return (NULL);
 }
 
-newName = _strcpy(newName, name);
-newOwner = _strcpy(newOwner, owner);
+newName = _strncpy(newName, name);
+newOwner = _strncpy(newOwner, owner);
 
 newDog->name = newName;
 newDog->age = age;

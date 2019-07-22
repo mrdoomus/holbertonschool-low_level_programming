@@ -16,7 +16,7 @@ int i;
 
 while (*(s + i) != '\0')
 {
-i++;
+	i++;
 }
 
 return (i);
@@ -37,7 +37,9 @@ char *_strncpy(char *dest, char *src)
 int i;
 
 	for (i = 0; src[i] != '\0'; i++)
+	{
 		dest[i] = src[i];
+	}
 
 	dest[i] = '\0';
 
@@ -63,16 +65,18 @@ dog_t *newDog;
 newDog = malloc(sizeof(struct dog));
 
 if (newDog == NULL)
+{
 	return (NULL);
+}
 
-newName = malloc(_strlen(name));
+newName = malloc((_strlen(name) + 1));
 if (newName == NULL)
 {
 	free(newDog);
 	return (NULL);
 }
 
-newOwner = malloc(_strlen(owner));
+newOwner = malloc((_strlen(owner) + 1));
 if (newOwner == NULL)
 {
 	free(newName);

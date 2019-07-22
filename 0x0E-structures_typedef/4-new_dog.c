@@ -65,14 +65,14 @@ newDog = malloc(sizeof(struct dog));
 if (newDog == NULL)
 	return (NULL);
 
-newName = malloc((_strlen(name) + 1));
+newName = malloc(_strlen(name));
 if (newName == NULL)
 {
 	free(newDog);
 	return (NULL);
 }
 
-newOwner = malloc((_strlen(owner) + 1));
+newOwner = malloc(_strlen(owner));
 if (newOwner == NULL)
 {
 	free(newName);

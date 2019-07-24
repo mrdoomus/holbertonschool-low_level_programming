@@ -23,7 +23,9 @@ int i;
 	{
 		cmp(array[i]);
 		if (cmp(array[i]))
+		{
 			return (i);
+		}
 	}
 
 return (-1);

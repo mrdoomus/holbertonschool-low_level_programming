@@ -38,6 +38,7 @@ while (format[i])
 			str = va_arg(ls, char *);
 			if (str == NULL)
 				str = "(nil)";
+
 			printf("%s", str);
 			break;
 		default:
@@ -46,6 +47,7 @@ while (format[i])
 	}
 if (spot == 0 && (i != strlen(format) - 1))
 	printf(", ");
+
 i++;
 }
 printf("\n");

@@ -4,7 +4,7 @@
 /**
  * sum_them_all - Sums number of arguments
  * @n: number of iterations
- * return: Returns an int
+ * Return: Returns an int
 **/
 
 int sum_them_all(const unsigned int n, ...)

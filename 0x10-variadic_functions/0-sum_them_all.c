@@ -17,7 +17,7 @@ if (n != 0)
 	va_start(ls, n);
 
 	for (i = 0; i < n; i++)
-		sum += va_args(ls, int);
+		sum += va_arg(ls, int);
 
 	va_end(ls);
 

@@ -31,11 +31,11 @@ list_t *newNode;
 
 	newNode = malloc(sizeof(newNode));
 	if (newNode == NULL)
-		return(NULL);
+		return (NULL);
 	if (str == NULL)
 	{
 		free(newNode);
-		return(NULL);
+		return (NULL);
 	}
 	newNode->len = _strlen(str);
 	newNode->str = strdup(str);

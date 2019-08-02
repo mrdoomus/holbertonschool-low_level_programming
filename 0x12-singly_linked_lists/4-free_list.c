@@ -9,11 +9,18 @@
 
 void free_list(list_t *head)
 {
-list_t *tmp = head;
+list_t *string = head, *tmp;
+
+while (tmp != NULL)
+{
+	free(string->str);
+	string = string->next;
+}
 
 while (head != NULL)
 {
-	free(head->str);
+	tmp = head;
+
 	free(tmp);
 	head = head->next;
 }

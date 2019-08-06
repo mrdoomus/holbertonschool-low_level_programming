@@ -2,9 +2,9 @@
 #include "lists.h"
 
 /**
- * pop_listint - Deletes the head node and returns the head node's data
+ * sum_listint - Sums every int of every node
  * @head: pointer to a struc
- * Return: Returns nothing
+ * Return: Returns the sum
 **/
 int sum_listint(listint_t *head)
 {

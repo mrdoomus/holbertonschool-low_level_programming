@@ -39,16 +39,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index == 0)
 	{
-	/*{
-		*head = tmp->next;
-		free(tmp);
+		pop_listint(head);
 		return (1);
-	}*/
-	pop_listint(head);
-	return (1);
 	}
 
-	for (i = 0; tmp != NULL && i < index; i++)
+	for (i = 0; tmp != NULL && i < (index - 1); i++)
 		tmp = tmp->next;
 
 	if (tmp == NULL || tmp->next == NULL)

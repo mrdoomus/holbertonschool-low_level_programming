@@ -18,5 +18,5 @@ listint_t *tmp;
 	}
 
 *head = NULL;
-return (NULL);
+return;
 }

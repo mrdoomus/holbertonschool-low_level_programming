@@ -26,7 +26,10 @@ int create_file(const char *filename, char *text_content)
 	int fd = 0, len = 0;
 
 	if (text_content == NULL)
+	{
 		fd = open(filename, O_CREAT);
+		return (1);
+	}
 
 	if (filename == NULL)
 		return (-1);

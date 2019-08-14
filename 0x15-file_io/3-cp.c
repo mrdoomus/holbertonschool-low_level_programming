@@ -6,7 +6,7 @@
 **/
 void error97(void)
 {
-	dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
 }
 
@@ -16,7 +16,7 @@ void error97(void)
 **/
 void error98(char *name)
 {
-	dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", name);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", name);
 	exit(98);
 }
 
@@ -26,7 +26,7 @@ void error98(char *name)
 **/
 void error99(char *name)
 {
-	dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", name);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
 	exit(99);
 }
 
@@ -54,8 +54,6 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		error97();
-	if (argv[1] == NULL)
-		error98(argv[1]);
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		error98(argv[1]);
@@ -79,7 +77,6 @@ int main(int argc, char *argv[])
 	}
 	if (close(fd) == -1)
 		error100(fd);
-
 	if (close(fd2) == -1)
 		error100(fd2);
 	return (0);

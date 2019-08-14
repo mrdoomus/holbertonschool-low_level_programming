@@ -49,7 +49,7 @@ void error100(int value)
 **/
 int main(int argc, char *argv[])
 {
-	int fd = 0, fd2 = 0, len = 0;
+	int fd = 0, fd2 = 0, rlen = 0, wlen = 0;
 	char buf[1024];
 
 	if (argc != 3)
@@ -62,17 +62,19 @@ int main(int argc, char *argv[])
 	fd2 = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
 	if (fd2 == -1)
 		error99(argv[2]);
-	len = read(fd, buf, 1024);
-	len = write(fd2, buf, len);
-	if (len == -1)
+	rlen = read(fd, buf, 1024);
+	if (rlen == -1)
+		error98(argv[1]);
+	wlen = write(fd2, buf, rlen);
+	if (wlen == -1)
 		error99(argv[2]);
-	while (len == 1024)
+	while (rlen == 1024)
 	{
-		len = read(fd, buf, 1024);
-		if (len == -1)
+		rlen = read(fd, buf, 1024);
+		if (rlen == -1)
 			error98(argv[1]);
-		len = write(fd2, buf, len);
-		if (len == -1)
+		wlen = write(fd2, buf, rlen);
+		if (wlen == -1)
 			error99(argv[2]);
 	}
 	if (close(fd) == -1)

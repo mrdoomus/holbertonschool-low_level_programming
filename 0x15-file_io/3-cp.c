@@ -49,7 +49,7 @@ void error100(int value)
 **/
 int main(int argc, char *argv[])
 {
-	int fd = 0, fd2 = 0, rlen = 0, wlen = 0;
+	int fd = 0, fd2 = 0, rlen = 0, wlen = 0, cs = 0, cs2 = 0;
 	char buf[1024];
 
 	if (argc != 3)
@@ -75,9 +75,11 @@ int main(int argc, char *argv[])
 		if (wlen == -1)
 			error99(argv[2]);
 	}
-	if (close(fd) == -1)
+	cs = close(fd);
+	if (cs == -1)
 		error100(fd);
-	if (close(fd2) == -1)
+	cs2 = close(fd2);
+	if (cs2 == -1)
 		error100(fd2);
 	return (0);
 }

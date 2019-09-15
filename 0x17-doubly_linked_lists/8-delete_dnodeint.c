@@ -18,14 +18,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		*head = (*head)->next;
 		if (tmp->next != NULL)
-			tmp->next->prev = NULL;
+			(*head)->prev = NULL;
 		else
 			*head = NULL;
 		free(tmp);
 		return (1);
 	}
 
-	for (i = 1; i < index; i++)
+	for (i = 0; i < index; i++)
 		tmp = tmp->next;
 
 	if (tmp == NULL || tmp->next == NULL)

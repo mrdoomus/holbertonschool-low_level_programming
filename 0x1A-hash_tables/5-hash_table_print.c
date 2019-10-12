@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - Prints a hash table.
+ * hash_table_print - Prints a hash table.
  * @ht: Hash table to look in
 **/
 
@@ -24,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (flag == 1)
 					printf(", ");
-				printf("'%s':'%s'", node->key, node->value);
+				printf("'%s': '%s'", node->key, node->value);
 				flag = 1;
 				node = node->next;
 			}

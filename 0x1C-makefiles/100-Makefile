@@ -15,7 +15,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	oclean clean
+fclean: oclean clean
 
 re: oclean all

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def island_perimeter(grid):
     '''Returns the perimeter of island in grid.'''
-    print(grid[2][-1])
     rows = (len(grid))
     items = (len(grid[0]))
     perimeter = 0

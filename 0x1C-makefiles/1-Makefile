@@ -1,0 +1,5 @@
+#1-Makefile - First make file with all and CC, SRC variables
+CC=gcc
+SRC=main.c holberton.c
+all: $(SRC)
+	$(CC) $(SRC) -o holberton

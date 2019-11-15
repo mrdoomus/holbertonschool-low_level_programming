@@ -1,0 +1,7 @@
+#2-Makefile - First make file with all and CC, SRC, OBJ and NAME variables
+CC=gcc
+SRC=main.c holberton.c
+OBJ=main.o holberton.o
+NAME=holberton
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)

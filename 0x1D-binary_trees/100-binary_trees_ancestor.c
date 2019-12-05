@@ -61,5 +61,5 @@ const binary_tree_t *second)
 		first = first->parent;
 		second = second->parent;
 	}
-	return ((binary_tree_t *)second);
+	return ((binary_tree_t *)first);
 }

@@ -5,6 +5,7 @@
  * @tree: node
  * Return: the level of the node
  */
+
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
 	size_t depth = 0;
@@ -38,11 +39,10 @@ const binary_tree_t *second)
 	fdepth = binary_tree_depth(first);
 	sdepth = binary_tree_depth(second);
 
-	if (first->parent->n == second->n)
+	/*if (first->parent->n == second->n)
 		return (first->parent);
 	else if (second->parent->n == first->n)
-		return (second->parent);
-
+		return (second->parent);*/
 	while (fdepth > sdepth)
 	{
 		first = first->parent;
@@ -53,7 +53,7 @@ const binary_tree_t *second)
 		second = second->parent;
 		sdepth--;
 	}
-	while (first && second)
+	for (i = 0; i < fdepth; i++)
 	{
 		if (first == second)
 			return ((binary_tree_t *)first);

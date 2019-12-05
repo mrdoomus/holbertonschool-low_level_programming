@@ -53,7 +53,7 @@ const binary_tree_t *second)
 			{
 				second = second->parent;
 				if (first->n == second->n)
-					return (first->left->parent);
+					return ((binary_tree_t *)first);
 			}
 		}
 	}
@@ -66,7 +66,7 @@ const binary_tree_t *second)
 			{
 				first = first->parent;
 				if (second->n == first->n)
-					return (second->right->parent);
+					return ((binary_tree_t *)second);
 			}
 		}
 	}

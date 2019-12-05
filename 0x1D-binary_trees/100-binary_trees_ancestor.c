@@ -1,24 +1,23 @@
 #include "binary_trees.h"
+
 /**
- * binary_tree_height - function that measures the height of a binary tree
- * @tree: pointer to the root node of the tree to measure the height.
- * Return: height of the tree or 0 if NULL
+ * binary_tree_depth - measure the depth of a node
+ * @tree: node
+ * Return: the level of the node
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+
+size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	size_t left = 0, right = 0;
+	size_t depth = 0;
 
 	if (!tree)
 		return (0);
 
-	if (tree->left)
-		left = 1 + binary_tree_height(tree->left);
-	if (tree->right)
-		right = 1 + binary_tree_height(tree->right);
+	if (!tree->parent)
+		return (depth);
 
-	if (left > right)
-		return (left);
-	return (right);
+	depth = 1 + binary_tree_depth(tree->parent);
+	return (depth);
 }
 
 /**
@@ -32,19 +31,44 @@ size_t binary_tree_height(const binary_tree_t *tree)
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second)
 {
+	size_t f, fdepth, s, sdepth;
+
 	if (!first || !second)
 		return (NULL);
+
+	fdepth = binary_tree_depth(first);
+	sdepth = binary_tree_depth(second);
 
 	if (first->parent->n == second->n)
 		return (first->parent);
 	else if (second->parent->n == first->n)
 		return (second->parent);
 
-	if (binary_tree_height(first) > binary_tree_height(second) ||
-	binary_tree_height(first) == binary_tree_height(second))
-		return (first->parent);
-	else if (binary_tree_height(first) < binary_tree_height(second))
-		return (second->parent);
-
+	if (sdepth > fdepth)
+	{
+		for (f = 0; f < fdepth; f++)
+		{
+			first = first->parent;
+			for (s = 0; s < sdepth; s++)
+			{
+				second = second->parent;
+				if (first->n == second->n)
+					return (first->left->parent);
+			}
+		}
+	}
+	else
+	{
+		for (s = 0; s < sdepth; s++)
+		{
+			second = second->parent;
+			for (s = 0; s < sdepth; s++)
+			{
+				first = first->parent;
+				if (second->n == first->n)
+					return (second->right->parent);
+			}
+		}
+	}
 	return (NULL);
 }

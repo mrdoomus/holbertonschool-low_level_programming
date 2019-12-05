@@ -54,12 +54,12 @@ const binary_tree_t *second)
 		second = second->parent;
 		sdepth--;
 	}
-	for (i = 0; i < fdepth; i++)
+	while (first && second)
 	{
 		if (first == second)
 			return ((binary_tree_t *)first);
 		first = first->parent;
 		second = second->parent;
 	}
-	return ((binary_tree_t *)first);
+	return ((binary_tree_t *)second);
 }

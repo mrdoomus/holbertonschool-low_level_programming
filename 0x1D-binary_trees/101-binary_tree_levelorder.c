@@ -52,6 +52,9 @@ void (*func)(int))
 {
 	int levels, i;
 
+	if (!tree)
+		return;
+
 	levels = binary_tree_height(tree) + 1;
 	for (i = 1; i <= levels; i++)
 		printGivenLevel(tree, i, func);

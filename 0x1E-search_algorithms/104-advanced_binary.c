@@ -39,10 +39,10 @@ int advbinary_help(int *array, size_t lt, size_t rt, int value)
 		printf("\n");
 
 		mid = lt + (rt - lt) / 2;
-		if (array[lt] == value)
+		if (lt == rt && array[lt] == value)
 			return (lt);
 		if (array[mid] >= value)
-			return (advbinary_help(array, lt, mid - 1, value));
+			return (advbinary_help(array, lt, mid, value));
 		return (advbinary_help(array, mid + 1, rt, value));
 	}
 	return (-1);

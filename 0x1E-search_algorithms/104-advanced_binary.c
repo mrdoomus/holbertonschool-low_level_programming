@@ -27,24 +27,21 @@ int advbinary_help(int *array, size_t lt, size_t rt, int value)
 {
 	size_t mid, i;
 
-	printf("Searching in array: ");
-	for (i = lt; i <= rt; i++)
-	{
-		printf("%d", array[i]);
-		if (i < rt)
-			printf(", ");
-	}
-	printf("\n");
-
-	if (rt == lt && array[rt] != value)
-		return (-1);
 	if (rt >= lt)
 	{
-		mid = lt + (rt - lt) / 2;
+		printf("Searching in array: ");
+		for (i = lt; i <= rt; i++)
+		{
+			printf("%d", array[i]);
+			if (i < rt)
+				printf(", ");
+		}
+		printf("\n");
 
-		if (array[mid] == value)
-			return (mid);
-		if (array[mid] > value)
+		mid = lt + (rt - lt) / 2;
+		if (array[lt] == value)
+			return (lt);
+		if (array[mid] >= value)
 			return (advbinary_help(array, lt, mid - 1, value));
 		return (advbinary_help(array, mid + 1, rt, value));
 	}

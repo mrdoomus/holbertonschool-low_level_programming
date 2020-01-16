@@ -42,9 +42,9 @@ int interpolation_search(int *array, size_t size, int value)
 			return (pos);
 
 		if (array[pos] < value)
-			lo = pos++;
+			lo = pos + 1;
 		else
-			hi = pos--;
+			hi = pos - 1;
 	}
 	return (-1);
 }

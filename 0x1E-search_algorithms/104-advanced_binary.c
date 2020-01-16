@@ -1,29 +1,29 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Calls binary_help func
+ * advanced_binary - Calls advbinary_help func
  * @array: List of ints
  * @size: Size of array
  * @value: Value to find
  * Return: Index where value was found in array
  */
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return (binary_help(array, 0, size - 1, value));
+	return (advbinary_help(array, 0, size - 1, value));
 }
 
 /**
- * binary_help - Searches for a value in an array of integers
- * using the Binary search algorithm
+ * advbinary_help - Searches for a value in an array of integers
+ * using the advanced Binary search algorithm
  * @array: List of ints
  * @lt: Left size of array
  * @rt: Right size of array
  * @value: Value to find
  * Return: Index where value was found in array
  */
-int binary_help(int *array, size_t lt, size_t rt, int value)
+int advbinary_help(int *array, size_t lt, size_t rt, int value)
 {
 	size_t mid, i;
 
@@ -45,8 +45,8 @@ int binary_help(int *array, size_t lt, size_t rt, int value)
 		if (array[mid] == value)
 			return (mid);
 		if (array[mid] > value)
-			return (binary_help(array, lt, mid - 1, value));
-		return (binary_help(array, mid + 1, rt, value));
+			return (advbinary_help(array, lt, mid - 1, value));
+		return (advbinary_help(array, mid + 1, rt, value));
 	}
 	return (-1);
 }
